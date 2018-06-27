@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <% include ../layout/css %>
+</head>
+
+<body>
+    <% include ../layout/header %>
+
+        <div class="container">
+            <% if (message.length > 0) { %>
+                <div class="alert alert-warning alert-dismissable fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>Ohps!</strong>
+                    <%= message %>.
+                </div>
+            <% } %>
+            <form class="form-signin" action="/login" method="post">
+                <h2 class="form-signin-heading">Welcome sign in</h2>
+                <label for="email" class="sr-only">사용자 계정</label>
+                <input type="text" id="email" name="email" class="form-control" placeholder="사용자 계정" required="">
+                <label for="password" class="sr-only">비밀번호</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                <br>
+                <p>Don't have an account? <a href="/signup">Signup</a></p>
+            </form>
+        </div>
+    
+    <% include ../layout/footer %>
+    <% include ../layout/js %>
+</body>
+
+</html>

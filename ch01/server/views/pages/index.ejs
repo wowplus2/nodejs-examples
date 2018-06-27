@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <% include ../layout/css %>
+</head>
+
+<body>
+  <% include ../layout/header %>
+
+    <div class="container">
+      <div class="page-header m-t-1">
+        <h1>
+          <%= title %>
+        </h1>
+      </div>
+      <p class="lead">Welcome to
+        <%= title %>
+      </p>
+    </div>
+
+  <% include ../layout/footer %>
+  <% include ../layout/js %>
+</body>
+
+</html>
